@@ -78,18 +78,37 @@ end
 Vagrant.configure("2") do |config|
 
   config.vm.define "ubu1" do |ubu1|
+    ubu1.vm.hostname = "ubu1"
     ubu1.vm.box = "generic/ubuntu2204"
+    ubu1.vm.network "private_network", ip: "192.168.121.101"
     ubu1.vm.provider :libvirt do |v|
       v.memory = 1024
       v.cpus = 1
     end
+
+    #cambio de contraseña
+    ubu1.vm.provision "shell", inline: <<-SHELL
+  echo "vagrant:josan1234" | chpasswd
+  sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  systemctl restart ssh
+SHELL
   end
+
   config.vm.define "ubu2" do |ubu2|
+    ubu2.vm.hostname = "ubu2"
     ubu2.vm.box = "generic/ubuntu2204"
+    ubu2.vm.network "private_network", ip: "192.168.121.102"
     ubu2.vm.provider :libvirt do |v|
       v.memory = 1024
       v.cpus = 1
     end
+
+ubu2.vm.provision "shell", inline: <<-SHELL
+  echo "vagrant:josan1234" | chpasswd
+  sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+  systemctl restart ssh
+SHELL
+
   end
 end
 
