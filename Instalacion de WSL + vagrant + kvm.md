@@ -84,8 +84,3 @@ Con el siguiente comando podemos ver en que estado estan las maquinas:
 `virsh list --all`
 
 Y con el comando: `vagrant ssh nombre_maquina`, nos conectamos a ella.
-
-
-
-**Con todo este proceso hecho, nuestro entorno quedaría tal que asi:**
-![diagrama](https://github.com/joseantoniogp00/POC-VAGRANT/blob/main/images/Diagrama.png?raw=true)
