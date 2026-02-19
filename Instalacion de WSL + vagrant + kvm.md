@@ -49,7 +49,7 @@ Esto nos instalara kvm ademas de libvirt que es lo que hace de intermediario ent
 - Ahora con esto preparado tenemos que instalar un plugin para que vagrant cree y gestione maquinas virtuales usando KVM como proveedor.
 `vagrant plugin install vagrant-libvirt`
 
-- Despues tenemos que instalar _build-essential_ que es un metapaquete que instala las herramientas basicas para compilar programas, la herramienta que nos hace falta es **make**.
+- Despues tenemos que instalar _build-essential_ que es un metapaquete que instala las herramientas basicas para compilar programas, **la herramienta que nos hace falta es make**.
 `sudo apt install build-essential`
 
 #### 6º Teniendo ya Vagrant y KVM preparados vamos a editar el fichero Vagrantfile.
@@ -87,7 +87,5 @@ Y con el comando: `vagrant ssh nombre_maquina`, nos conectamos a ella.
 
 
 
-
-
-
-
+**Con todo este proceso hecho, nuestro entorno quedaría tal que asi:**
+![diagrama](https://github.com/joseantoniogp00/POC-VAGRANT/blob/main/images/Diagrama.png?raw=true)
