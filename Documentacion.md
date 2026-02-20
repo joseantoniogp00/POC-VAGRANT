@@ -36,6 +36,7 @@ Los discos que usan ubu1 y ubu2 estan en la ruta que se muestra abajo, ademas de
 ubu1 (mi_mv_ubu1.img) y ubu2 (mi_mv_ubu2.img), podemos ver los box que tenemos descargados para instalarlos 
 en otras maquinas.
 `/var/lib/libvirt/images`
+
 **- donde está el proceso de qemu que ejecuta las máquinas del vagrant**
 ejecutando `ps aux` podemos ver todos los procesos que hay en nuestra maquina, solo tenemos que buscar el de qemu
 
