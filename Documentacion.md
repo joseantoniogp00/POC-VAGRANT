@@ -84,3 +84,10 @@ Latency (ms):
 Threads fairness:
     events (avg/stddev):           48990.0000/0.00
     execution time (avg/stddev):   9.9831/0.00
+
+**Cuantas veces hago una llamada a "vagrant configure"**
+Cada vez que ejecutamos un comando "vagrant" hacemos que este lea la configuracion de vagrant en el Vagrantfile , por lo que entonces cada vez que ejecutemos un comando con vagrant estaremos haciendo una llamada a `vagrant configure` que este se encuentra en el Vagrantfile
+
+**Y a "vmprovision"**
+A "vmprovision" realizaremos una llamada cuando ejecutemos los comandos siguientes `vagrant up`(a este comando solo la primera vez),
+`vagrant up --provision`o `vagrant reload --provision` estos comandos hacen una llamada al `config.vm.provision` que existe dentro del Vagrantfile.
